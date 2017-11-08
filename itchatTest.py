@@ -32,7 +32,7 @@ def get_response(msg):
 
 @itchat.msg_register(TEXT)
 def tuling_reply(msg):
-    reply = get_response(msg['text'])
+    reply = get_response(msg['Text'])
     return reply or 'I received: ' + msg.get('Text')
 
 # 微信好友发来的内容isFriendChat=True, 群聊发来的内容isGroupChat=True, 公众号发来的内容isMpChat=False
